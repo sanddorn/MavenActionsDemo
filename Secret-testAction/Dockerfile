@@ -1,6 +1,8 @@
 FROM maven:3-jdk-10
 
-COPY secret.sh .
-RUN chmod a+x secret.sh
+WORKDIR /
 
-ENTRYPOINT ./secret.sh
+COPY secret.sh /
+RUN chmod a+x /secret.sh
+
+ENTRYPOINT /bin/sh
