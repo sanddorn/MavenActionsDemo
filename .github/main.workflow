@@ -21,5 +21,5 @@ action "Quality Check" {
 action "./Secret-testAction" {
   uses = "./Secret-testAction"
   secrets = ["SECRET"]
-  runs = "/secret"
+  runs = "/secret.sh"
 }
