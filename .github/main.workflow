@@ -21,6 +21,6 @@ action "Quality Check" {
 action "Secret-test" {
   uses = "docker://maven:3-jdk-10"
   needs = ["compile"]
-  runs = "echo $SECRET"
+  runs = "if [ x$SECRET = xSecret ]; then echo Secret test ok; fi"
   secrets = ["SECRET"]
 }
