@@ -11,6 +11,8 @@ LABEL "maintainer"="Nils Bokermann <nils.bokermann+github@bermuda.de>"
 
 WORKDIR /
 
+CMD apt-get -y update && apt-get -y upgrade && apt-get install python3 pip3
+
 COPY sonar.sh sonarqube-result.py /
 RUN chmod a+x /sonar.sh /sonarqube-result.py
 

@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 import getopt
 import sys
 from requests import Session
@@ -76,6 +77,7 @@ def main():
     password = None
     token = None
     task_id = None
+    project_key = None
 
     for option, argument in opts:
         if option in ("-h", "--help"):
