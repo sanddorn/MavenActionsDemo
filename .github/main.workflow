@@ -13,8 +13,8 @@ action "compile" {
 }
 
 action "Quality Check" {
-  uses = "docker://maven:3-jdk-10"
-  runs = "mvn sonar:sonar -Dsonar.host.url=http://development.bermuda.de/sonar -Dsonar.login=$SONAR_TOKEN"
+  uses = "./sonar-Action"
+  runs = "./sonar.sh"
   secrets = ["SONAR_TOKEN"]
 }
 
