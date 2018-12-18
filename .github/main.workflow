@@ -13,6 +13,6 @@ action "compile" {
 action "./sonar-Action" {
   uses = "./sonar-Action"
   needs = ["compile"]
-  runs = "sonar.sh"
+  runs = "./sonar.sh"
   secrets = ["SONAR_TOKEN"]
 }
