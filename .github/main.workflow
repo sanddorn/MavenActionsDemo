@@ -1,9 +1,7 @@
 workflow "New workflow" {
   on = "push"
   resolves = [
-    "Quality Check",
-    "compile",
-    "./Secret-testAction",
+    "./sonar-Action",
   ]
 }
 
@@ -12,14 +10,9 @@ action "compile" {
   runs = "mvn clean install"
 }
 
-action "Quality Check" {
+action "./sonar-Action" {
   uses = "./sonar-Action"
-  runs = "./sonar.sh"
+  needs = ["compile"]
+  runs = "/sonar.sh"
   secrets = ["SONAR_TOKEN"]
-}
-
-action "./Secret-testAction" {
-  uses = "./Secret-testAction"
-  secrets = ["SECRET"]
-  runs = "/secret.sh"
 }
