@@ -2,7 +2,7 @@ FROM maven:3-jdk-10
 
 LABEL "com.github.actions.name"="Sonarqube"
 LABEL "com.github.actions.description"="Check a maven project and report the result. Will fail, if result is not success"
-LABEL "com.github.actions.icon"="mic"
+LABEL "com.github.actions.icon"="check-circle"
 LABEL "com.github.actions.color"="purple"
 
 LABEL "repository"="https://github.com/sanddorn/ActionsTest"
