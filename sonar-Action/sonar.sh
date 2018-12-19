@@ -7,7 +7,7 @@ export TASKID=$(mvn sonar:sonar \
 
 echo "Task: ${TASKID}"
 
-/sonarqube-result.py --token=${SONAR_TOKEN} --Base=${SONAR_HOST}  --task="${TASKID}"
+#/sonarqube-result.py --token=${SONAR_TOKEN} --Base=${SONAR_HOST}  --task="${TASKID}"
 
 export RESULT=$(/sonarqube-result.py --token=${SONAR_TOKEN} --Base=${SONAR_HOST}  --task="${TASKID}")
 
