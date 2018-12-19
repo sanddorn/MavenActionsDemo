@@ -1,5 +1,5 @@
 #! /bin/sh
-
+set -e
 SONAR_HOST=http://development.bermuda.de/sonar
 export TASKID=$(mvn sonar:sonar \
      -Dsonar.host.url=${SONAR_HOST} \
