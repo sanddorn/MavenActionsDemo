@@ -1,4 +1,4 @@
-workflow "New workflow" {
+workflow "Maven Build and Check" {
   on = "push"
   resolves = ["Quality Check"]
 }
