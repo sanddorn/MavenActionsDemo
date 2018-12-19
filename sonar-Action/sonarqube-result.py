@@ -110,7 +110,7 @@ def main():
                 success = True
                 print(result)
             except NotFound:
-                print("TaskId '{0}' not found. sleeping 5 seconds".format(task_id))
+                print("TaskId '{0}' not found. sleeping 5 seconds".format(task_id), file=sys.stderr)
                 sleep(5)
 
 
