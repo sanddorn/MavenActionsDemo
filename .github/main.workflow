@@ -1,5 +1,5 @@
 workflow "Maven Build and Check" {
-  on = "release"
+  on = "push"
   resolves = ["Quality Check"]
 }
 
